@@ -1,5 +1,4 @@
 Feature: Automated Moderation Tools for Recipes and Comments
-
   The application shall include automated moderation tools that review and flag inappropriate or duplicate recipes and
   comments, ensuring a positive and safe community experience by preventing the spread of harmful or redundant content.
 

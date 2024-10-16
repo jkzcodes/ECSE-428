@@ -1,6 +1,7 @@
 Feature: Platform Responsiveness on Mobile Devices
   The application shall be fully responsive on mobile devices, ensuring users can browse, post, and interact with it
   from their phones.
+
   Background:
     Given the system is operating under normal conditions
 

@@ -1,6 +1,6 @@
 Feature: Create Discussion Forums for Upcoming Meet-Ups
-  As a user, I want to create discussion forums for upcoming meet-ups where attendees can talk about their recipe ideas in advance,
-  so the event feels more collaborative.
+  As a user, I want to create discussion forums for upcoming meet-ups where attendees can talk about their recipe
+  ideas in advance, so the event feels more collaborative.
 
   Background:
     Given the user is logged into the platform

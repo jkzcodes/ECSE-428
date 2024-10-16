@@ -1,6 +1,6 @@
 Feature: Multi-language Support
-
   The application shall support multiple languages, ensuring accessibility for users from different regions.
+
   Background:
     Given the user is on the application homepage
 
