@@ -1,25 +1,40 @@
 Feature: View another user's account
     As a user,
     I want to view the account of another user,
-    So that I can see their posts, their average rating, and their friends.
+    So that I can see the projects they’re a part of.
 
-    # Normal Flow: User views another user's account
-    Scenario: User views another user's account successfully
-        Given the user is logged into the app
-        When the user navigates to another user's profile
-        Then the user should see the other user's posts
-        And the user should see the other user's average rating
-        And the user should see the other user's friends
+    # Normal Flow: View another user's account
+    Scenario: Successfully view another user's account
+        Given the user is logged in
+        When the user navigates to the "Search User" page
+        And the user enters the username "<username>"
+        And the user clicks the "Search" button
+        Then the user's account page should be displayed
+        And the projects the user is a part of should be visible
 
-    # Error Flow: User tries to view a non-existent account
-    Scenario: User tries to view an account that does not exist
-        Given the user is logged into the app
-        When the user navigates to a non-existent user's profile
-        Then the user should see an error message saying "User not found"
+        Examples:
+            | username       |
+            | john_doe       |
+            | jane_smith     |
+            | alice_johnson  |
 
-    # Error Flow: User views another user's account without being logged in
-    Scenario: User views another user's account without being logged in
-        Given the user is not logged into the app
-        When the user tries to navigate to another user's profile
-        Then the user should be prompted to log in
-        And the user should not see the other user's account
+    # Alternate Flow: User not found
+    Scenario: Search for a non-existent user
+        Given the user is logged in
+        When the user navigates to the "Search User" page
+        And the user enters the username "<username>"
+        And the user clicks the "Search" button
+        Then an error message should be displayed indicating that the user was not found
+
+        Examples:
+            | username       |
+            | non_existent   |
+            | unknown_user   |
+
+    # Error Flow: Missing username
+    Scenario: Search with missing username
+        Given the user is logged in
+        When the user navigates to the "Search User" page
+        And the user leaves the username field blank
+        And the user clicks the "Search" button
+        Then an error message should be displayed indicating that the username is required
