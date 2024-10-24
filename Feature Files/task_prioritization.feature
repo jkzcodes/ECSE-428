@@ -23,13 +23,6 @@ Feature: Task Priority
     Then the system should update the task with the new priority  
     And the user should see the task with the updated priority label
 
-  # Error Flow: Priority save fails due to network issue  
-  Scenario: Task priority fails to save due to network connection issue  
-    When the user clicks "Save" after selecting a priority level  
-    And there is a network connection issue  
-    Then the system should display an error message: "Unable to save priority. Please check your connection and try again."  
-    And the task should retain its previous priority level
-
   # Error Flow: Priority not selected  
   Scenario: User attempts to save a task without selecting a priority  
     When the user creates or edits a task  

@@ -31,12 +31,6 @@ Feature: Task Scheduling
     Then the system should remove the task from the scheduled tasks
     And the user should see a confirmation message that the scheduled task has been canceled
 
-  # Error Flow: Scheduling fails due to network issue
-  Scenario: Scheduling fails due to network connection issue
-    When the user clicks "Schedule" after selecting the date and time
-    And there is a network connection issue
-    Then the system should display an error message: "Unable to schedule the task. Please check your connection and try again."
-    And the task should remain on the task creation page
 
   # Error Flow: Schedule a task in the past
   Scenario: User attempts to schedule a task for a past time

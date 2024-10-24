@@ -1,5 +1,6 @@
 Feature: Suggested Task Substitutions
-  As a project manager or team member, I want to see suggested task substitutions (e.g., a different tool or approach), so I can modify tasks to suit the project’s needs or team preferences.
+  As a project manager or team member, I want to see suggested task substitutions (e.g., a different tool or approach),
+  so I can modify tasks to suit the project’s needs or team preferences.
 
   Background:
     Given the user is logged into the platform

@@ -4,7 +4,7 @@ Feature: Edit a Kanban task
     So that my changes can be seen by other users.
 
     # Normal Flow: Edit a task
-    Scenario: Successfully edit a Kanban task
+    Scenario Outline: Successfully edit a Kanban task
         Given the user is logged in
         And the user is on the Kanban board
         When the user selects a task to edit
@@ -28,7 +28,7 @@ Feature: Edit a Kanban task
         Then the user should be redirected to the Kanban board without saving changes
 
     # Alternate Flow: Add a due date to the task
-    Scenario: Add a due date to the Kanban task
+    Scenario Outline: Add a due date to the Kanban task
         Given the user is logged in
         And the user is on the Kanban board
         When the user selects a task to edit

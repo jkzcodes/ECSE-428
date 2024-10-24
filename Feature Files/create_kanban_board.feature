@@ -7,7 +7,7 @@ Feature: Create Kanban Board
         Given I am logged into the project management application
 
     # Normal flow: Create a new Kanban board
-    Scenario: Successfully create a new Kanban board
+    Scenario Outline: Successfully create a new Kanban board
         When I navigate to the "Create Board" page
         And I enter "<board_name>" in the board name field
         And I click the "Create" button
@@ -19,7 +19,7 @@ Feature: Create Kanban Board
             | Project B  |
 
     # Alternate flow: Create a new Kanban board with optional description
-    Scenario: Successfully create a new Kanban board with a description
+    Scenario Outline: Successfully create a new Kanban board with a description
         When I navigate to the "Create Board" page
         And I enter "<board_name>" in the board name field
         And I enter "<description>" in the description field
@@ -31,7 +31,7 @@ Feature: Create Kanban Board
             | Project B  | This is a description for Project B |
 
     # Error flow: Create a new Kanban board with an existing name
-    Scenario: Fail to create a new Kanban board with an existing name
+    Scenario Outline: Fail to create a new Kanban board with an existing name
         Given a board named "<existing_board_name>" already exists
         When I navigate to the "Create Board" page
         And I enter "<existing_board_name>" in the board name field

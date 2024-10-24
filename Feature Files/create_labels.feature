@@ -4,7 +4,7 @@ Feature: Create labels for tasks
     So that I can categorize and prioritize work.
 
     # Normal Flow: Create a label
-    Scenario: Successfully create a label
+    Scenario Outline: Successfully create a label
         Given the project manager is logged in
         When the project manager navigates to the "Create Label" page
         And the project manager enters a label name "<label_name>"
@@ -26,7 +26,7 @@ Feature: Create labels for tasks
         Then the project manager should be redirected to the labels list page
 
     # Alternate Flow: Add a description to the label
-    Scenario: Add a description to the label
+    Scenario Outline: Add a description to the label
         Given the project manager is logged in
         When the project manager navigates to the "Create Label" page
         And the project manager enters a label name "<label_name>" and description "<description>"
@@ -50,7 +50,7 @@ Feature: Create labels for tasks
         And the project manager should see an error message indicating that the label name is required
 
     # Error Flow: Duplicate label name
-    Scenario: Create a label with a duplicate name
+    Scenario Outline: Create a label with a duplicate name
         Given the project manager is logged in
         When the project manager navigates to the "Create Label" page
         And the project manager enters a label name that already exists "<duplicate_label_name>"

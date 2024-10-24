@@ -4,7 +4,7 @@ Feature: Attach a file to a Kanban task
     So that other users can see and download the attachment.
 
     # Normal Flow
-    Scenario: Successfully attach a file to a Kanban task
+    Scenario Outline: Successfully attach a file to a Kanban task
         Given the user is logged in
         And the user navigates to the Kanban board
         When the user selects a task
@@ -28,7 +28,7 @@ Feature: Attach a file to a Kanban task
         Then the user should be redirected to the Kanban board without attaching the file
 
     # Alternate Flow: Attach multiple files to a task
-    Scenario: Attach multiple files to a Kanban task
+    Scenario Outline: Attach multiple files to a Kanban task
         Given the user is logged in
         And the user navigates to the Kanban board
         When the user selects a task
@@ -53,7 +53,7 @@ Feature: Attach a file to a Kanban task
         And the user should see an error message indicating that a file is required
 
     # Error Flow: Unsupported file type
-    Scenario: Attach an unsupported file type to a Kanban task
+    Scenario Outline: Attach an unsupported file type to a Kanban task
         Given the user is logged in
         And the user navigates to the Kanban board
         When the user selects a task

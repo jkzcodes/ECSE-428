@@ -1,5 +1,6 @@
 Feature: Create Discussion Forums for Upcoming Project Events
-  As a project manager or team member, I want to create discussion forums for upcoming project events where attendees can discuss tasks and ideas in advance, so the event feels more collaborative.
+  As a project manager or team member, I want to create discussion forums for upcoming project events where attendees
+  can discuss tasks and ideas in advance, so the event feels more collaborative.
 
   Background:
     Given the user is logged into the platform

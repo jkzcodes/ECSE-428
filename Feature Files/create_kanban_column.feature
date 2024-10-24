@@ -4,7 +4,7 @@ Feature: Create a Kanban column
     So that I can customize a Kanban board and team members can move tasks to that column.
 
     # Normal Flow: Create a new Kanban column
-    Scenario: Successfully create a new Kanban column
+    Scenario Outline: Successfully create a new Kanban column
         Given the project manager is logged in
         When the project manager navigates to the "Kanban Board" page
         And the project manager clicks the "Add Column" button

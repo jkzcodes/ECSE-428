@@ -4,7 +4,7 @@ Feature: Create Account
     So that others can see my account and that I can create and be added to projects.
 
     # Normal Flow
-    Scenario: Successful account creation
+    Scenario Outline: Successful account creation
         Given the user is an unregistered user
         When the user provides valid registration details "<email>", "<username>", "<password>", "<first_name>", "<last_name>"
         And the user submits the registration form

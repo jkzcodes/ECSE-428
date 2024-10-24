@@ -1,10 +1,10 @@
 Feature: View another user's account
     As a user,
     I want to view the account of another user,
-    So that I can see the projects they’re a part of.
+    So that I can see the projects they are a part of.
 
     # Normal Flow: View another user's account
-    Scenario: Successfully view another user's account
+    Scenario Outline: Successfully view another user's account
         Given the user is logged in
         When the user navigates to the "Search User" page
         And the user enters the username "<username>"
@@ -19,7 +19,7 @@ Feature: View another user's account
             | alice_johnson  |
 
     # Alternate Flow: User not found
-    Scenario: Search for a non-existent user
+    Scenario Outline: Search for a non-existent user
         Given the user is logged in
         When the user navigates to the "Search User" page
         And the user enters the username "<username>"

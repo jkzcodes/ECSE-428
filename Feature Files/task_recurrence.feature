@@ -15,6 +15,7 @@ Feature: Recurring Tasks
     Then the system should save the task with the selected recurrence schedule  
     And the task should automatically reappear in the user's task list based on the chosen frequency
 
+
   # Alternate Flow: Modify the recurrence schedule of an existing task  
   Scenario: Successfully update a task's recurrence schedule  
     Given the user has set a recurring task  
@@ -33,12 +34,6 @@ Feature: Recurring Tasks
     Then the system should remove the recurrence from the task  
     And the task should no longer automatically reappear after completion
 
-  # Error Flow: Recurring task fails to save due to network issue  
-  Scenario: Recurring task fails to save due to network connection issue  
-    When the user clicks "Save" after setting or modifying the recurrence  
-    And there is a network connection issue  
-    Then the system should display an error message: "Unable to save the recurring task. Please check your connection and try again."  
-    And the task should retain its previous settings without recurrence
 
   # Error Flow: Attempt to set an invalid recurrence frequency  
   Scenario: User attempts to set an invalid recurrence frequency  

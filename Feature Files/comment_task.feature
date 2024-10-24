@@ -4,7 +4,7 @@ Feature: Comment on a Kanban task
     So that other team members can see my comment.
 
     # Normal Flow: Add a comment to a task
-    Scenario: Successfully add a comment to a Kanban task
+    Scenario Outline: Successfully add a comment to a Kanban task
         Given the user is logged in
         And the user navigates to the Kanban board
         When the user selects a task "<task_name>"

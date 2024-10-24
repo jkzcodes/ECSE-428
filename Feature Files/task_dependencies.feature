@@ -30,12 +30,6 @@ Feature: Task Dependencies
     Then the system should update the task to remove the dependency  
     And the task should no longer be marked as "Blocked"
 
-  # Error Flow: Task dependency fails to save due to network issue  
-  Scenario: Task dependency fails to save due to network connection issue  
-    When the user clicks "Save" after setting a task dependency  
-    And there is a network connection issue  
-    Then the system should display an error message: "Unable to save task dependency. Please check your connection and try again."  
-    And the task should retain its previous state without the new dependency
 
   # Error Flow: Dependent task attempted to start before prerequisite completion  
   Scenario: User attempts to start a dependent task before completing prerequisite  

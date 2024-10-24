@@ -26,12 +26,6 @@ Feature: Notification Preferences for Kanban Updates
     Then the system should revert the notification settings to the default options
     And the user should be able to receive notifications according to the default settings
 
-  # Error Flow: Notification preferences fail to save due to network issue
-  Scenario: Preferences fail to save due to network connection issue
-    When the user clicks "Save"
-    And there is a network connection issue
-    Then the system should display an error message: "Unable to save preferences. Please check your connection and try again."
-    And the user should remain on the notification settings page with their selections intact
 
   # Error Flow: Invalid notification settings
   Scenario: User tries to enable unsupported notification method

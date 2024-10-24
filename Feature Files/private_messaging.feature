@@ -32,12 +32,6 @@ Feature: Private Messaging
     Then the system should send the media file to the recipient
     And the user should see the media attachment in the chat window
 
-  # Error Flow: Sending message fails due to network issue
-  Scenario: Sending message fails due to network connection issue
-    When the user clicks "Send" after typing a message
-    And there is a network connection issue
-    Then the system should display an error message: "Unable to send the message. Please check your connection and try again."
-    And the message should remain in the input field
 
   # Error Flow: Attempt to send an empty message
   Scenario: User attempts to send an empty message

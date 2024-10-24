@@ -21,13 +21,6 @@ Feature: Toggle Display Mode for Kanban Board
     Then the system should switch back to light mode for the Kanban board
     And the user should see the interface in light mode
 
-  # Error Flow: Theme switch fails due to network issue
-  Scenario: Theme switch fails due to network connection issue
-    When the user clicks "Save" after selecting dark mode for the Kanban board
-    And there is a network connection issue
-    Then the system should display an error message: "Unable to change display settings. Please check your connection and try again."
-    And the user should remain on the settings page with their original theme selection intact
-
   # Error Flow: Unsupported device
   Scenario: User tries to enable dark mode on an unsupported device
     When the user selects dark mode on a device that does not support it

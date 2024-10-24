@@ -24,12 +24,6 @@ Feature: Task Analytics
     Then the system should display a comparison of analytics for the selected tasks
     And the user should see a side-by-side comparison of views, likes, and comments
 
-  # Error Flow: Analytics fails to load due to network issue
-  Scenario: Analytics fails to load due to network connection issue
-    When the user navigates to the analytics section of a task
-    And there is a network connection issue
-    Then the system should display an error message: "Unable to load task analytics. Please check your connection and try again."
-    And the user should remain on the analytics page
 
   # Error Flow: task has no analytics available
   Scenario: task has no analytics available

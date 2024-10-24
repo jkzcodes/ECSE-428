@@ -27,12 +27,6 @@ Feature: Pin tasks
     Then the system should pin all selected tasks to the top of the profile or feed
     And the user should see a confirmation message that the tasks have been pinned
 
-  # Error Flow: Pin fails due to network issue
-  Scenario: Pin fails due to network connection issue
-    When the user clicks the "Pin task" button
-    And there is a network connection issue
-    Then the system should display an error message: "Unable to pin the task. Please check your connection and try again."
-    And the task should remain unpinned
 
   # Error Flow: User attempts to pin more tasks than allowed
   Scenario: User attempts to pin more tasks than the limit

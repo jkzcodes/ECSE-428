@@ -4,7 +4,7 @@ Feature: Add tasks to the Kanban board
     So that I can keep track of my work.
 
     # Normal Flow: Add a task
-    Scenario: Successfully add a task to the Kanban board
+    Scenario Outline: Successfully add a task to the Kanban board
         Given the user is logged in
         When the user navigates to the "Kanban Board" page
         And the user clicks the "Add Task" button
@@ -28,7 +28,7 @@ Feature: Add tasks to the Kanban board
         Then the user should be redirected to the "Kanban Board" page
 
     # Alternate Flow: Add a task with a due date
-    Scenario: Add a task with a due date
+    Scenario Outline: Add a task with a due date
         Given the user is logged in
         When the user navigates to the "Kanban Board" page
         And the user clicks the "Add Task" button
