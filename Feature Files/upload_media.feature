@@ -1,10 +1,10 @@
 Feature: Upload Media
   As a user, I want to upload media files,
-  so I can share images, videos, and other content with my posts.
+  so I can share images, videos, and other content with my tasks.
 
   Background:
     Given the user is logged into the platform
-    And the user is on the post creation page
+    And the user is on the task creation page
 
   # Normal Flow
   Scenario: Successfully upload a media file
@@ -13,7 +13,7 @@ Feature: Upload Media
     And the user clicks the "Submit" button
     Then the system should upload the media file
     And the user should see a confirmation message that the media has been uploaded
-    And the media should be displayed in the post preview
+    And the media should be displayed in the task preview
 
   # Alternate Flow: Upload multiple media files
   Scenario: Successfully upload multiple media files
@@ -22,13 +22,13 @@ Feature: Upload Media
     And the user clicks the "Submit" button
     Then the system should upload all selected media files
     And the user should see a confirmation message that the media has been uploaded
-    And all media files should be displayed in the post preview
+    And all media files should be displayed in the task preview
 
   # Alternate Flow: Preview uploaded media
-  Scenario: Preview uploaded media before posting
+  Scenario: Preview uploaded media before tasking
     When the user uploads a media file
     Then the system should display a preview of the uploaded media
-    And the user should be able to remove the media before submitting the post
+    And the user should be able to remove the media before submitting the task
 
   # Error Flow: Upload fails due to file size limit
   Scenario: Upload fails due to exceeding file size limit
