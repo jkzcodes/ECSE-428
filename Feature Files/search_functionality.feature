@@ -1,5 +1,5 @@
-Feature: Search for Kanban Items
-  As a user, I want to search for Kanban items, users, or tags,
+Feature: Search for Kanban tasks
+  As a user, I want to search for Kanban tasks, users, or tags,
   so I can quickly find relevant tasks on the collective Kanban board.
 
   Background:
@@ -7,22 +7,22 @@ Feature: Search for Kanban Items
     And the user is on the main Kanban board page
 
   # Normal Flow
-  Scenario: Successfully search for Kanban items
+  Scenario: Successfully search for Kanban tasks
     When the user enters a search term in the search bar
     And the user clicks on the "Search" button
-    Then the system should display matching Kanban items, users, or tags
+    Then the system should display matching Kanban tasks, users, or tags
     And the search results should be relevant to the entered term
 
   # Alternate Flow: No matching results
   Scenario: Search term yields no results
-    When the user enters a search term with no matching Kanban items
+    When the user enters a search term with no matching Kanban tasks
     Then the system should display a message: "No results found."
     And the user should remain on the search results page
 
   # Alternate Flow: Search suggestion
   Scenario: Search term partially matches content
     When the user enters a partial search term
-    Then the system should display auto-suggestions for related Kanban items, users, or tags
+    Then the system should display auto-suggestions for related Kanban tasks, users, or tags
     And the user should be able to select from the suggestions
 
   # Error Flow: Search bar empty
