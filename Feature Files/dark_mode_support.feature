@@ -1,5 +1,5 @@
-Feature: Dark Mode Support
-  As a user, I want to toggle between light and dark modes,
+Feature: Toggle Display Mode for Kanban Board
+  As a user, I want to toggle between light and dark modes for the Kanban board,
   so I can choose the display setting that is easier on my eyes.
 
   Background:
@@ -7,23 +7,23 @@ Feature: Dark Mode Support
     And the user is on the settings page
 
   # Normal Flow
-  Scenario: Successfully enable dark mode
+  Scenario: Successfully enable dark mode for Kanban board
     When the user selects the dark mode option
     And the user saves the settings
-    Then the system should apply dark mode across the platform
-    And the user should see the interface in dark mode
+    Then the system should apply dark mode across the Kanban board interface
+    And the user should see the Kanban board in dark mode
 
-  # Alternate Flow: Switch back to light mode
-  Scenario: User switches from dark mode to light mode
+  # Alternate Flow: Switch back to light mode for Kanban board
+  Scenario: User switches from dark mode to light mode for Kanban board
     Given the user has dark mode enabled
     When the user selects the light mode option
     And the user saves the settings
-    Then the system should switch back to light mode
+    Then the system should switch back to light mode for the Kanban board
     And the user should see the interface in light mode
 
   # Error Flow: Theme switch fails due to network issue
   Scenario: Theme switch fails due to network connection issue
-    When the user clicks "Save" after selecting dark mode
+    When the user clicks "Save" after selecting dark mode for the Kanban board
     And there is a network connection issue
     Then the system should display an error message: "Unable to change display settings. Please check your connection and try again."
     And the user should remain on the settings page with their original theme selection intact
