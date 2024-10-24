@@ -1,4 +1,4 @@
-Feature: task Analytics
+Feature: Task Analytics
   As a user, I want to view analytics for my tasks,
   so I can understand their performance and engagement.
 
